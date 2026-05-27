@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { slides } from "@/slides";
 import { useSlideNav } from "@/hooks/use-slide-nav";
@@ -21,6 +22,22 @@ export function SlideDeck() {
 
   const entry = slides[index];
   const Slide = entry.Component;
+
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    const onChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", onChange);
+    return () => document.removeEventListener("fullscreenchange", onChange);
+  }, []);
+
+  const toggleFullscreen = useCallback(() => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen?.();
+    } else {
+      document.documentElement.requestFullscreen?.().catch(() => {});
+    }
+  }, []);
 
   return (
     <main className="fixed inset-0 flex items-center justify-center bg-[#f3f3f1]">
@@ -102,6 +119,13 @@ export function SlideDeck() {
             >
               outline
             </a>
+            <button
+              onClick={toggleFullscreen}
+              className="rounded-full px-2 py-1 transition hover:text-violet-600"
+              title="Fullscreen (F)"
+            >
+              {isFullscreen ? "exit" : "full"}
+            </button>
           </div>
         </div>
       </div>
