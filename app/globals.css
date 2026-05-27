@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+html,
+body {
+  background: #f3f3f1;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.25);
+}
+
+.slide-stage {
+  aspect-ratio: 16 / 9;
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.shimmer-text {
+  background-size: 200% 200%;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@keyframes conveyor {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 20px 0;
+  }
+}
+
+.conveyor-track {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 8px,
+    rgba(15, 23, 42, 0.05) 8px,
+    rgba(15, 23, 42, 0.05) 12px
+  );
+  background-size: 20px 100%;
+  animation: conveyor 1.6s linear infinite;
+}
