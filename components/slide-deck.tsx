@@ -63,7 +63,12 @@ export function SlideDeck() {
         </DeckContextProvider>
       </div>
 
-      <div className="pointer-events-none fixed bottom-4 left-1/2 z-30 -translate-x-1/2">
+      <div
+        className={`pointer-events-none fixed bottom-4 left-1/2 z-30 -translate-x-1/2 transition-opacity duration-200 ${
+          isFullscreen ? "pointer-events-none opacity-0" : "opacity-100"
+        }`}
+        aria-hidden={isFullscreen}
+      >
         <div className="pointer-events-auto flex flex-col items-center gap-2">
           {stepCount > 1 && (
             <div className="flex items-center gap-1.5 rounded-full bg-white/85 px-3 py-1.5 shadow-sm ring-1 ring-slate-200/80">
