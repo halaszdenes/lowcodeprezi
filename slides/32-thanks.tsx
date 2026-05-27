@@ -12,7 +12,7 @@ function ThanksSlide(_: SlideProps) {
         title="Questions?"
         subtitle={
           <>
-            halasz.denes.zoltan@gmail.com
+            hello@deneshalasz.com
             <br />
             <span className="text-slate-500">/in/deneshalasz</span>
           </>
