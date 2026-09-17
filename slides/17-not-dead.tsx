@@ -101,8 +101,8 @@ const CONCERNS: Concern[] = [
   },
   {
     label: "Compliance",
-    sub: "SOC, GDPR, HIPAA — baked in, not bolted on.",
-    hue: "from-violet-400 to-fuchsia-300",
+    sub: "SOC, GDPR, HIPAA: baked in, not bolted on.",
+    hue: "from-brand-400 to-brand-300",
     icon: ComplianceIcon,
   },
 ];
@@ -123,7 +123,7 @@ function NotDeadSlide({ step }: SlideProps) {
             className="font-display font-semibold leading-[1.02] tracking-tight"
             style={{ fontSize: "clamp(2.8rem, 6vw, 5.6rem)" }}
           >
-            <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+            <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
               I don&apos;t think so.
             </span>
           </h1>
@@ -134,7 +134,7 @@ function NotDeadSlide({ step }: SlideProps) {
             className="max-w-[58ch] text-xl leading-[1.55] text-slate-600"
           >
             Power Platform isn&apos;t just an app or an automation. It&apos;s a{" "}
-            <span className="font-semibold text-slate-800">platform</span> —
+            <span className="font-semibold text-slate-800">platform</span>,
             which means companies don&apos;t have to worry about:
           </motion.p>
         </motion.div>
@@ -188,7 +188,7 @@ export const slide17: SlideEntry = {
     section: "Act 2 · The AI question",
     steps: 5,
     notes:
-      "Direct answer to the question that hung at the end of the previous slide. The argument is that Power Platform is a PLATFORM, not just an app — and that's what companies actually buy. Stepped reveal of the 4 things they don't have to worry about.\n\n• Step 0 (load): Title + body visible, no cards. Say: 'Did vibe coding kill low-code? I don't think so. Here's why — Power Platform isn't just an app you can replace by prompting an AI. It's a platform. And that means companies get a bunch of things for free that they would otherwise have to solve themselves.'\n• Step 1: + Hosting card. 'Microsoft runs the servers. You don't run ops, you don't have a 3am pager.'\n• Step 2: + IT security card. 'Enterprise authentication, data isolation, audit logs — baked in.'\n• Step 3: + Agents going rogue. 'When agents do something weird — and they will — it happens in a sandbox you can audit and undo.'\n• Step 4: + Compliance. 'SOC, GDPR, HIPAA — Microsoft already cleared the legal hurdles your company would have to clear itself.'\n\nClose with: 'You can vibe-code an app in 30 minutes. Getting that app cleared for production at a real company — that's where the platform earns its keep.' → next slide (vibe-code-lowcode) doubles down: low-code platforms got Copilot too.",
+      "Direct answer to the question that hung at the end of the previous slide. The argument is that Power Platform is a PLATFORM, not just an app, and that's what companies actually buy. Stepped reveal of the 4 things they don't have to worry about.\n\n• Step 0 (load): Title + body visible, no cards. Say: 'Did vibe coding kill low-code? I don't think so. Here's why: Power Platform isn't just an app you can replace by prompting an AI. It's a platform. And that means companies get a bunch of things for free that they would otherwise have to solve themselves.'\n• Step 1: + Hosting card. 'Microsoft runs the servers. You don't run ops, you don't have a 3am pager.'\n• Step 2: + IT security card. 'Enterprise authentication, data isolation, audit logs: baked in.'\n• Step 3: + Agents going rogue. 'When agents do something weird, and they will, it happens in a sandbox you can audit and undo.'\n• Step 4: + Compliance. 'SOC, GDPR, HIPAA: Microsoft already cleared the legal hurdles your company would have to clear itself.'\n\nClose with: 'You can vibe-code an app in 30 minutes. Getting that app cleared for production at a real company, that's where the platform earns its keep.' → next slide (vibe-code-lowcode) doubles down: low-code platforms got Copilot too.",
   },
   Component: NotDeadSlide,
 };

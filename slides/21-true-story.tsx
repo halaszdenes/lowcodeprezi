@@ -16,7 +16,7 @@ function TrueStorySlide(_: SlideProps) {
           style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}
         >
           Let me tell you{" "}
-          <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+          <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
             a true story.
           </span>
         </motion.h1>
@@ -30,8 +30,8 @@ function TrueStorySlide(_: SlideProps) {
         >
           <defs>
             <linearGradient id="ts-line" x1="0%" x2="100%" y1="0%" y2="0%">
-              <stop offset="0%" stopColor="#7c3aed" stopOpacity="0" />
-              <stop offset="50%" stopColor="#d946ef" />
+              <stop offset="0%" stopColor="#0984e3" stopOpacity="0" />
+              <stop offset="50%" stopColor="#2d95e6" />
               <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0" />
             </linearGradient>
           </defs>
@@ -48,6 +48,15 @@ function TrueStorySlide(_: SlideProps) {
             }}
           />
         </svg>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center text-2xl font-medium text-slate-600"
+        >
+          How low-code creates real value, without a single AI step.
+        </motion.p>
       </div>
     </SlideShell>
   );
@@ -59,7 +68,7 @@ export const slide21: SlideEntry = {
     title: "Let me tell you a true story",
     section: "Act 3 · Proof",
     notes:
-      "Cover slide for the FIFO case study. One line, dramatic pause. The audience just got the abstract argument — now we earn it with a real example.\n\nSay: 'OK, theory done. Let me tell you a true story. Real company, real problem, real numbers.' Pause. Then click → manufacturing video starts.\n\nKeep it under 10 seconds. The slide is a breath, not a beat.",
+      "Cover slide for the FIFO case study. One line, dramatic pause. The audience just got the abstract argument: now we earn it with a real example.\n\nThe subtitle lands two seconds in: 'without a single AI step'. After a whole act about AI, that line is the point: the biggest saving in this talk needed none of it. Say: 'OK, theory done. Let me tell you a true story. Real company, real problem, real numbers.' Pause. Then click → manufacturing video starts.\n\nKeep it under 10 seconds. The slide is a breath, not a beat.",
   },
   Component: TrueStorySlide,
 };

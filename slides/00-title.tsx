@@ -11,7 +11,6 @@ function TitleSlide(_: SlideProps) {
       footerRight="↳ start"
     >
       <HeroLayout
-        eyebrow="A talk by Denes Halasz"
         title={<>Low&#8209;Code,</>}
         titleAccent="Big Impact."
         subtitle="Transforming careers with Power Platform."

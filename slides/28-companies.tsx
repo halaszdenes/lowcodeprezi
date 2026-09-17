@@ -44,7 +44,7 @@ export const slide28: SlideEntry = {
     title: "What's in it for companies",
     section: "Act 4 · What to do Monday",
     notes:
-      "Land this right after the QA story while the audience is thinking 'great, but my boss won't let me.'\n\nThe pitch to your manager:\n• CHEAPER — no consulting engagement, no IT backlog\n• FASTER — weeks not quarters\n• LESS RISK — built by someone who knows the process, validated in days\n• EASY POC — show the working thing, then decide whether to invest\n\nFrame this as a TOOL the audience can use on Monday: 'here's exactly what to say in the meeting.'",
+      "Land this right after the QA story while the audience is thinking 'great, but my boss won't let me.'\n\nThe pitch to your manager:\n• CHEAPER: no consulting engagement, no IT backlog\n• FASTER: weeks not quarters\n• LESS RISK: built by someone who knows the process, validated in days\n• EASY POC: show the working thing, then decide whether to invest\n\nFrame this as a TOOL the audience can use on Monday: 'here's exactly what to say in the meeting.'",
   },
   Component: CompaniesSlide,
 };

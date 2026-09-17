@@ -10,7 +10,7 @@ const VIDEOS = [
     src: "/videos/1-tyresmanufacturingdroppingbasket.mp4",
     label: "Production",
     sub: "Three lines, three products, all running in parallel.",
-    accent: "#a78bfa",
+    accent: "#2d95e6",
   },
   {
     src: "/videos/2-handputtingsampleinbag.mp4",
@@ -21,7 +21,7 @@ const VIDEOS = [
   {
     src: "/videos/3-paperbagsputonshelf.mp4",
     label: "Queueing",
-    sub: "Samples wait their turn — first in, first out.",
+    sub: "Samples wait their turn: first in, first out.",
     accent: "#34d399",
     mirror: true,
   },
@@ -33,7 +33,7 @@ const CHYRON_DELAY = 0.45;
 const CHYRON_DURATION = 0.9;
 const TIMELINE_DURATION = 0.75;
 
-// 5-step state machine — first video auto-starts on slide mount:
+// 5-step state machine. First video auto-starts on slide mount:
 // step 0: video 0 playing (autostart) → onEnded auto-advances to step 1
 // step 1: video 1 ready (paused, first frame)
 // step 2: video 1 playing → auto-advances to step 3
@@ -157,37 +157,7 @@ function VideoSequence({ step, onNext }: { step: number; onNext: () => void }) {
         </motion.div>
       </div>
 
-      {/* Status badge, top right — switches between PLAYING and READY */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`status-${isPlaying ? "playing" : "ready"}-${visibleIndex}`}
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -6 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="absolute right-[6%] top-[8%] z-10 flex items-center gap-2 rounded-full bg-black/55 px-3 py-2 backdrop-blur-md"
-        >
-          <motion.span
-            animate={{ opacity: isPlaying ? [0.35, 1, 0.35] : 1 }}
-            transition={{
-              duration: 1.8,
-              repeat: isPlaying ? Infinity : 0,
-              ease: "easeInOut",
-            }}
-            className="h-2 w-2 rounded-full"
-            style={{ background: current.accent }}
-          />
-          <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-white/85">
-            {isPlaying
-              ? `Playing · ${visibleIndex + 1}/${VIDEOS.length}`
-              : isLastVideo
-                ? `End · ${visibleIndex + 1}/${VIDEOS.length}`
-                : `Ready · ${visibleIndex + 1}/${VIDEOS.length}`}
-          </span>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Chapter chyron, bottom left — persists across paused/playing within same chapter, subtitle swaps */}
+      {/* Chapter chyron, bottom left: persists across paused/playing within same chapter, subtitle swaps */}
       <AnimatePresence mode="wait">
         <motion.div
           key={`chyron-${visibleIndex}`}
@@ -235,7 +205,7 @@ function VideoSequence({ step, onNext }: { step: number; onNext: () => void }) {
               </motion.div>
               <div className="mt-2 h-7 max-w-[40ch] overflow-hidden">
                 <AnimatePresence mode="wait">
-                  {isPlaying ? (
+                  {isPlaying && (
                     <motion.div
                       key={`sub-${visibleIndex}`}
                       initial={{ opacity: 0, y: 6 }}
@@ -246,29 +216,6 @@ function VideoSequence({ step, onNext }: { step: number; onNext: () => void }) {
                     >
                       {current.sub}
                     </motion.div>
-                  ) : isLastVideo ? null : (
-                    <motion.div
-                      key={`hint-${visibleIndex}`}
-                      initial={{ opacity: 0, y: 6 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -6 }}
-                      transition={{ duration: 0.45 }}
-                      className="flex items-center gap-2 text-sm text-white/70"
-                    >
-                      <motion.span
-                        animate={{ scale: [1, 1.15, 1] }}
-                        transition={{
-                          duration: 1.6,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                      >
-                        ▶
-                      </motion.span>
-                      <span className="font-mono text-xs uppercase tracking-[0.25em]">
-                        Press → to play
-                      </span>
-                    </motion.div>
                   )}
                 </AnimatePresence>
               </div>
@@ -276,7 +223,7 @@ function VideoSequence({ step, onNext }: { step: number; onNext: () => void }) {
           </motion.div>
       </AnimatePresence>
 
-      {/* (intro overlay removed — first video auto-starts on slide mount) */}
+      {/* (intro overlay removed; first video auto-starts on slide mount) */}
     </div>
   );
 }
@@ -292,11 +239,11 @@ function ManufacturingProcessSlide({ step, next }: SlideProps) {
 export const slide22: SlideEntry = {
   meta: {
     id: "13-manufacturing-process",
-    title: "Setting the scene — manufacturing process",
+    title: "Setting the scene: manufacturing process",
     section: "Act 3 · Proof",
     steps: 5,
     notes:
-      "Cinematic 3-chapter video sequence. First video auto-starts on slide mount. Subsequent videos require a click to start (after the previous one ends + auto-advances to a ready state). 5 click steps total:\n\n• Step 1 (slide loads): Video 1 — Production — auto-starts immediately. Chyron unfolds: 'CHAPTER 01 / PRODUCTION / Three lines, three products, all running in parallel.' Say: 'Let me show you what this factory does.' Video plays through once.\n• Step 2 (auto): Video 1 ends → auto-advances. Video 2 paused at first frame. Chyron updates to 'CHAPTER 02 / SAMPLING / ▶ Press → to play'. Say: 'After each batch, QA pulls one sample from each line.'\n• Step 3 (click 1): Video 2 plays. Subtitle replaces hint with 'QA pulls one sample from each line.' Let it play.\n• Step 4 (auto): Video 2 ends → auto-advances. Video 3 paused. Chyron updates to 'CHAPTER 03 / QUEUEING / ▶ Press → to play'. Say: 'The samples go on a shelf. First in, first out — that's the rule.'\n• Step 5 (click 2): Video 3 plays. Plays through and STOPS (no auto-advance). Status badge: 'End · 3/3'. Say: 'Now watch what happens.'\n• Step 6 (click 3): Advances to slide 14 (FIFO disaster).\n\nThe 1.4s crossfade between videos gives a cinematic beat. Total clicks within this slide: 3 (start video 2, start video 3, leave slide).",
+      "Cinematic 3-chapter video sequence. First video auto-starts on slide mount. Subsequent videos require a click to start (after the previous one ends + auto-advances to a ready state). 5 click steps total:\n\n• Step 1 (slide loads): Video 1 (Production) auto-starts immediately. Chyron unfolds: 'CHAPTER 01 / PRODUCTION / Three lines, three products, all running in parallel.' Say: 'Let me show you what this factory does.' Video plays through once.\n• Step 2 (auto): Video 1 ends → auto-advances. Video 2 paused at first frame. Chyron updates to 'CHAPTER 02 / SAMPLING / ▶ Press → to play'. Say: 'After each batch, QA pulls one sample from each line.'\n• Step 3 (click 1): Video 2 plays. Subtitle replaces hint with 'QA pulls one sample from each line.' Let it play.\n• Step 4 (auto): Video 2 ends → auto-advances. Video 3 paused. Chyron updates to 'CHAPTER 03 / QUEUEING / ▶ Press → to play'. Say: 'The samples go on a shelf. First in, first out. That's the rule.'\n• Step 5 (click 2): Video 3 plays. Plays through and STOPS (no auto-advance). Status badge: 'End · 3/3'. Say: 'Now watch what happens.'\n• Step 6 (click 3): Advances to the next slide (FIFO disaster).\n\nThe 1.4s crossfade between videos gives a cinematic beat. Total clicks within this slide: 3 (start video 2, start video 3, leave slide).",
   },
   Component: ManufacturingProcessSlide,
 };

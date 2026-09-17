@@ -31,7 +31,7 @@ export function StatementLayout({
         {titleAccent && (
           <>
             {" "}
-            <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+            <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
               {titleAccent}
             </span>
           </>

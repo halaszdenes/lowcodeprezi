@@ -91,14 +91,14 @@ const BENEFITS: Benefit[] = [
   },
   {
     label: "Less risk",
-    sub: "Small bets — easy to kill, easy to change course.",
+    sub: "Small bets. Easy to kill, easy to change course.",
     hue: "from-sky-400 to-cyan-300",
     icon: ShieldCheckIcon,
   },
   {
     label: "Easy to PoC",
     sub: "Test the idea Monday, demo by Friday.",
-    hue: "from-violet-400 to-fuchsia-300",
+    hue: "from-brand-400 to-brand-300",
     icon: SparkIcon,
   },
 ];
@@ -114,7 +114,7 @@ function WhatsInItForCompaniesSlide({ step }: SlideProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="font-mono text-sm uppercase tracking-[0.3em] text-violet-700">
+          <p className="font-mono text-sm uppercase tracking-[0.3em] text-brand-700">
             The real reason it sells
           </p>
           <h1
@@ -122,7 +122,7 @@ function WhatsInItForCompaniesSlide({ step }: SlideProps) {
             style={{ fontSize: "clamp(2.8rem, 5.8vw, 5.4rem)" }}
           >
             What&apos;s in it{" "}
-            <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+            <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
               for companies?
             </span>
           </h1>
@@ -177,7 +177,7 @@ export const slide14: SlideEntry = {
     section: "Act 2 · The AI question",
     steps: 5,
     notes:
-      "Punchline of the Power Platform tour. The audience just saw the tools — now make the case for why companies actually bought them. Four word labels. Stepped reveal.\n\n• Step 1 (load): Title only. Say: 'OK so you've seen the toolbox. Here's why companies are actually obsessed with it. Four words.'\n• Step 2: + 'Cheaper'. Say: 'Cheaper. Fewer six-figure devs, lower licensing, less infrastructure to maintain.'\n• Step 3: + 'Faster'. Say: 'Faster. What pro-code teams ship in quarters, you ship in days.'\n• Step 4: + 'Less risk'. Say: 'Less risk. Small bets — if it doesn't work, you killed three days of work, not three months.'\n• Step 5: + 'Easy to PoC'. Say: 'And easy to prototype. Test the idea Monday, demo it Friday. If the demo lands, you turn it into the real thing. If it doesn't, you move on.'\n\nClose with: 'That's the company side. Now — what about the elephant — AI?' → leads into vibe-coding section.",
+      "Punchline of the Power Platform tour. The audience just saw the tools: now make the case for why companies actually bought them. Four word labels. Stepped reveal.\n\n• Step 1 (load): Title only. Say: 'OK so you've seen the toolbox. Here's why companies are actually obsessed with it. Four words.'\n• Step 2: + 'Cheaper'. Say: 'Cheaper. Fewer six-figure devs, lower licensing, less infrastructure to maintain.'\n• Step 3: + 'Faster'. Say: 'Faster. What pro-code teams ship in quarters, you ship in days.'\n• Step 4: + 'Less risk'. Say: 'Less risk. Small bets: if it doesn't work, you killed three days of work, not three months.'\n• Step 5: + 'Easy to PoC'. Say: 'And easy to prototype. Test the idea Monday, demo it Friday. If the demo lands, you turn it into the real thing. If it doesn't, you move on.'\n\nClose with: 'That's the company side. Now, what about the elephant: AI?' → leads into the automation + AI block (Power Automate, AI Builder, Copilot Studio, deterministic vs agentic), then vibe coding.",
   },
   Component: WhatsInItForCompaniesSlide,
 };

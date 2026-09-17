@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Low-Code, Big Impact — Denes Halasz",
+  title: "Low-Code, Big Impact | Denes Halasz",
   description:
     "Transforming Careers with Power Platform. An animated talk by Denes Halasz.",
 };

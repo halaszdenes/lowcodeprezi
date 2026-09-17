@@ -25,7 +25,7 @@ export function HeroLayout({
           initial={{ opacity: 0, x: -8 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="mb-8 font-mono text-xs uppercase tracking-[0.35em] text-violet-700"
+          className="mb-8 font-mono text-xs uppercase tracking-[0.35em] text-brand-700"
         >
           {eyebrow}
         </motion.p>
@@ -42,7 +42,7 @@ export function HeroLayout({
         {titleAccent && (
           <>
             <br />
-            <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+            <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
               {titleAccent}
             </span>
           </>

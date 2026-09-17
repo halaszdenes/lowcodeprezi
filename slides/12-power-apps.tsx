@@ -6,8 +6,8 @@ import { SlideShell } from "@/components/slide-shell";
 
 const USE_CASES = [
   "Data entry & approvals",
-  "Booking systems — desks, parking, meeting rooms",
-  "Employee requests — expenses, home office, holiday",
+  "Booking systems: desks, parking, meeting rooms",
+  "Employee requests: expenses, home office, holiday",
 ];
 
 function PowerAppsSlide(_: SlideProps) {
@@ -21,7 +21,7 @@ function PowerAppsSlide(_: SlideProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="font-mono text-sm uppercase tracking-[0.3em] text-violet-700">
+            <p className="font-mono text-sm uppercase tracking-[0.3em] text-brand-700">
               Build the actual tool
             </p>
             <h1
@@ -66,7 +66,7 @@ function PowerAppsSlide(_: SlideProps) {
                   }}
                   className="flex items-center gap-3 text-xl text-slate-800"
                 >
-                  <span className="h-2 w-2 shrink-0 rounded-full bg-violet-500" />
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-brand-500" />
                   {u}
                 </motion.li>
               ))}
@@ -100,10 +100,10 @@ function PowerAppsSlide(_: SlideProps) {
 export const slide12: SlideEntry = {
   meta: {
     id: "12-power-apps",
-    title: "Power Apps — build the tool",
+    title: "Power Apps: build the tool",
     section: "Act 2 · The AI question",
     notes:
-      "Tool 2 of 3. This is where 'drag a button' from earlier pays off — they just saw it on the canvas-button slide. Now we name the tool.\n\nSay: 'Second one — Power Apps. This is where you build the actual tools your team uses. Canvas apps means you drag and drop the UI — forms, buttons, galleries. Typical use cases: data entry, approvals, booking the parking space, requesting holiday. The unsexy line-of-business apps that every company has fifty of and that pay your salary.'\n\n~40s. The screenshot does a lot of work — let them see it.",
+      "Tool 2 of 3. This is where 'drag a button' from earlier pays off: they just saw it on the canvas-button slide. Now we name the tool.\n\nSay: 'Second one: Power Apps. This is where you build the actual tools your team uses. Canvas apps means you drag and drop the UI: forms, buttons, galleries. Typical use cases: data entry, approvals, booking the parking space, requesting holiday. The unsexy line-of-business apps that every company has fifty of and that pay your salary.'\n\n~40s. The screenshot does a lot of work: let them see it.",
   },
   Component: PowerAppsSlide,
 };

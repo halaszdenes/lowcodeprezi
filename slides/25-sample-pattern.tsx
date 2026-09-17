@@ -64,7 +64,7 @@ const RISK_BG: Record<Risk, string> = {
 function SamplePaperBag({ risk, num }: { risk: Risk; num: number }) {
   const color = RISK_COLOR[risk];
   return (
-    <svg width="74" height="90" viewBox="0 0 34 42" fill="none" aria-hidden>
+    <svg width="86" height="104" viewBox="0 0 34 42" fill="none" aria-hidden>
       <ellipse cx="17" cy="40" rx="11" ry="1.2" fill="#000" opacity="0.08" />
       <path
         d="M5 11 L29 11 L28 39 Q28 40 27 40 L7 40 Q6 40 6 39 Z"
@@ -128,10 +128,10 @@ function SampleColumn({
         layout: { duration: 1.0, ease: [0.22, 1, 0.36, 1] },
       }}
       className="relative flex flex-col items-center gap-2"
-      style={{ minWidth: 84 }}
+      style={{ minWidth: 100 }}
     >
       <div
-        className={`flex h-10 w-16 items-center justify-center rounded-md border-2 font-mono text-base font-bold ${
+        className={`flex h-11 w-[72px] items-center justify-center rounded-md border-2 font-mono text-lg font-bold ${
           flagged
             ? "border-red-400 bg-red-50 text-red-700"
             : "border-slate-200 bg-white text-slate-700"
@@ -150,8 +150,8 @@ function SampleColumn({
 
 function EllipsisColumn() {
   return (
-    <div className="flex flex-col items-center justify-center" style={{ minWidth: 56 }}>
-      <span className="font-mono text-4xl text-slate-300">…</span>
+    <div className="flex flex-col items-center justify-center" style={{ minWidth: 100 }}>
+      <span className="font-mono text-5xl text-slate-300">…</span>
     </div>
   );
 }
@@ -167,11 +167,11 @@ function SampleRow({
 }) {
   return (
     <div className="flex items-start gap-5">
-      <div className="w-32 shrink-0 pt-2">
+      <div className="w-36 shrink-0 pt-2">
         <div className="font-mono text-xs uppercase tracking-[0.25em] text-slate-400">
           Order
         </div>
-        <div className="text-lg font-semibold text-slate-700">{label}</div>
+        <div className="text-xl font-semibold text-slate-700">{label}</div>
       </div>
       <div className="flex flex-1 items-end justify-around">
         {slots.map((slot, i) => {
@@ -193,35 +193,40 @@ function SampleRow({
 }
 
 function HighRiskLabel({ leftPct }: { leftPct: number }) {
+  // Outer div owns the centering transform; the inner motion.div animates.
+  // (framer-motion would overwrite an inline transform with its own.)
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -12, scale: 0.92 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -12, scale: 0.92 }}
-      transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-      className="absolute"
-      style={{ left: `${leftPct}%`, top: 0, transform: "translateX(-50%)" }}
+    <div
+      className="absolute -translate-x-1/2"
+      style={{ left: `${leftPct}%`, top: 0 }}
     >
-      <div className="relative">
-        <div className="rounded-lg bg-red-600 px-4 py-2.5 text-center text-sm font-bold uppercase tracking-wider text-white shadow-lg">
-          High risk
-          <br />
-          of non-approval
+      <motion.div
+        initial={{ opacity: 0, y: -12, scale: 0.92 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: -12, scale: 0.92 }}
+        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="relative">
+          <div className="rounded-lg bg-red-600 px-5 py-3 text-center text-base font-bold uppercase tracking-wider text-white shadow-lg">
+            High risk
+            <br />
+            of non-approval
+          </div>
+          {/* Tip pointing down */}
+          <div
+            className="absolute left-1/2 -translate-x-1/2"
+            style={{
+              bottom: -8,
+              width: 0,
+              height: 0,
+              borderLeft: "8px solid transparent",
+              borderRight: "8px solid transparent",
+              borderTop: "8px solid #dc2626",
+            }}
+          />
         </div>
-        {/* Tip pointing down */}
-        <div
-          className="absolute left-1/2 -translate-x-1/2"
-          style={{
-            bottom: -8,
-            width: 0,
-            height: 0,
-            borderLeft: "8px solid transparent",
-            borderRight: "8px solid transparent",
-            borderTop: "8px solid #dc2626",
-          }}
-        />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
 
@@ -293,7 +298,7 @@ function SamplePatternScene({ step }: { step: number }) {
   const showBottomRow = step >= 4;
 
   // Each row has 9 slots (8 samples + 1 ellipsis). Each slot's horizontal
-  // center (% of the row width) — approximated for arrow positioning.
+  // center (% of the row width), approximated for arrow positioning.
   // Row uses justify-around so positions are evenly spread.
   // Position N out of 9 → center at (N + 0.5) / 9.
   const slotCenterPct = (idx: number) => ((idx + 0.5) / 9) * 100;
@@ -311,10 +316,13 @@ function SamplePatternScene({ step }: { step: number }) {
   return (
     <div className="flex h-full flex-col gap-3">
       <div>
-        <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight text-slate-900">
+        <h1
+          className="font-display font-semibold leading-tight tracking-tight text-slate-900"
+          style={{ fontSize: "clamp(2rem, 3.6vw, 3rem)" }}
+        >
           The pattern across many samples
         </h1>
-        <p className="mt-2 max-w-[68ch] text-base text-slate-600">
+        <p className="mt-2 max-w-[70ch] text-lg text-slate-600">
           50 samples come in over time. The original FIFO order is on top; the
           risk-weighted re-order is on the bottom.
         </p>
@@ -324,7 +332,7 @@ function SamplePatternScene({ step }: { step: number }) {
         {/* Top row */}
         <div className="relative pt-24">
           {/* High-risk labels float above this row */}
-          <div className="absolute left-32 right-0 top-0 h-24">
+          <div className="absolute left-36 right-0 top-0 h-24">
             <AnimatePresence>
               {showLabel1 && (
                 <HighRiskLabel key="label-4" leftPct={sample4TopX} />
@@ -344,7 +352,7 @@ function SamplePatternScene({ step }: { step: number }) {
 
         {/* Middle band with arrows */}
         <div className="relative h-28">
-          <div className="absolute left-32 right-0 h-full">
+          <div className="absolute left-36 right-0 h-full">
             <AnimatePresence>
               {showArrows && (
                 <Fragment key="arrows">
@@ -399,11 +407,11 @@ function SamplePatternSlide({ step }: SlideProps) {
 export const slide25: SlideEntry = {
   meta: {
     id: "17-sample-pattern",
-    title: "Sample pattern — FIFO vs risk-weighted",
+    title: "Sample pattern: FIFO vs risk-weighted",
     section: "Act 3 · Proof",
     steps: 5,
     notes:
-      "Extra visual aid showing the reorder pattern across many sampling rounds (not just one round like slides 14-15). 5 click steps:\n\n• Step 1 (load): Top row only — samples 1, 2, 3, 4, 5, …, 48, 49, 50 in FIFO order. Each shown as: number box + paper bag + small status dot (green/amber/red for low/medium/high risk). Samples 4 and 49 already styled as flagged (red border on the number box).\n• Step 2: First red 'HIGH RISK / OF NON-APPROVAL' label appears above sample 4 with a pointing tip.\n• Step 3: Second 'HIGH RISK' label appears above sample 49.\n• Step 4: Two red curved arrows draw from the labels down to where samples 4 and 49 will land in the new order.\n• Step 5: Bottom row fades up — samples reordered as 4, 49, 1, 2, 3, …, 5, 48, 50. High-risk samples now at the front of the queue.\n\nKey lines to land:\n— 'This is one sampling round multiplied by hundreds. Same pattern.'\n— 'We didn't change WHAT we inspect — only the ORDER.'\n— 'Two lines of Power Apps code. That's it.'",
+      "Extra visual aid showing the reorder pattern across many sampling rounds (not just one round like slides 14-15). 5 click steps:\n\n• Step 1 (load): Top row only: samples 1, 2, 3, 4, 5, …, 48, 49, 50 in FIFO order. Each shown as: number box + paper bag + small status dot (green/amber/red for low/medium/high risk). Samples 4 and 49 already styled as flagged (red border on the number box).\n• Step 2: First red 'HIGH RISK / OF NON-APPROVAL' label appears above sample 4 with a pointing tip.\n• Step 3: Second 'HIGH RISK' label appears above sample 49.\n• Step 4: Two red curved arrows draw from the labels down to where samples 4 and 49 will land in the new order.\n• Step 5: Bottom row fades up: samples reordered as 4, 49, 1, 2, 3, …, 5, 48, 50. High-risk samples now at the front of the queue.\n\nKey lines to land:\n• 'This is one sampling round multiplied by hundreds. Same pattern.'\n• 'We didn't change WHAT we inspect, only the ORDER.'\n• 'Two lines of Power Apps code. That's it.'",
   },
   Component: SamplePatternSlide,
 };

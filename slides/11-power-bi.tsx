@@ -28,7 +28,7 @@ function PowerBiSlide(_: SlideProps) {
           >
             <img
               src="/pp-bi.png"
-              alt="Power BI represented as the Hulk — strong, heavy-lifting data muscle"
+              alt="Power BI represented as the Hulk: strong, heavy-lifting data muscle"
               className="block h-full w-full object-cover"
             />
           </div>
@@ -41,7 +41,7 @@ function PowerBiSlide(_: SlideProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="font-mono text-sm uppercase tracking-[0.3em] text-violet-700">
+            <p className="font-mono text-sm uppercase tracking-[0.3em] text-brand-700">
               The data muscle
             </p>
             <h1
@@ -86,7 +86,7 @@ function PowerBiSlide(_: SlideProps) {
                   }}
                   className="flex items-center gap-3 text-xl text-slate-800"
                 >
-                  <span className="h-2 w-2 shrink-0 rounded-full bg-violet-500" />
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-brand-500" />
                   {a}
                 </motion.li>
               ))}
@@ -101,10 +101,10 @@ function PowerBiSlide(_: SlideProps) {
 export const slide11: SlideEntry = {
   meta: {
     id: "11-power-bi",
-    title: "Power BI — the data muscle",
+    title: "Power BI: the data muscle",
     section: "Act 2 · The AI question",
     notes:
-      "Tool 1 of 3. The Hulk metaphor is the joke — Power BI handles the heavy lifting on data.\n\nSay: 'First tool — Power BI. This is your data muscle. Power Query pulls and reshapes the data, DAX is the formula language, and dashboards are the output. The reason people fall in love with it: it handles large datasets, has enterprise security baked in, refreshes itself on schedule, and if you know Excel, DAX is going to feel familiar.'\n\nKeep it tight — ~40s. Don't teach DAX, just establish the tool.",
+      "Tool 1 of 3. The Hulk metaphor is the joke: Power BI handles the heavy lifting on data.\n\nSay: 'First tool: Power BI. This is your data muscle. Power Query pulls and reshapes the data, DAX is the formula language, and dashboards are the output. The reason people fall in love with it: it handles large datasets, has enterprise security baked in, refreshes itself on schedule, and if you know Excel, DAX is going to feel familiar.'\n\nKeep it tight: ~40s. Don't teach DAX, just establish the tool.",
   },
   Component: PowerBiSlide,
 };

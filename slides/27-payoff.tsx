@@ -18,7 +18,7 @@ function PayoffScene({ step }: { step: number }) {
 
   return (
     <div className="flex h-full flex-col items-center justify-center text-center">
-      {/* Headline group — `layout` makes it smoothly slide up
+      {/* Headline group: `layout` makes it smoothly slide up
           when comparison/implication appear below. */}
       <motion.div
         layout
@@ -29,7 +29,7 @@ function PayoffScene({ step }: { step: number }) {
           initial={{ opacity: 0, y: -6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="font-mono text-xs uppercase tracking-[0.4em] text-violet-700"
+          className="font-mono text-xs uppercase tracking-[0.4em] text-brand-700"
         >
           The payoff
         </motion.p>
@@ -41,7 +41,7 @@ function PayoffScene({ step }: { step: number }) {
           className="mt-6 font-display font-semibold leading-[1.02] tracking-[-0.03em] text-slate-900"
           style={{ fontSize: "clamp(3.5rem, 9vw, 8rem)" }}
         >
-          <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+          <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
             €80k saved
           </span>
         </motion.h1>
@@ -57,7 +57,7 @@ function PayoffScene({ step }: { step: number }) {
         </motion.p>
       </motion.div>
 
-      {/* Time comparison — step 1.
+      {/* Time comparison: step 1.
           `layout` propagates layout changes; AnimatePresence with
           popLayout coordinates entry / exit with sibling repositioning. */}
       <AnimatePresence mode="popLayout">
@@ -80,12 +80,12 @@ function PayoffScene({ step }: { step: number }) {
                 damping: 22,
                 delay: 0.15,
               }}
-              className="rounded-2xl border border-violet-200 bg-violet-50/80 px-6 py-4 shadow-sm"
+              className="rounded-2xl border border-brand-200 bg-brand-50/80 px-8 py-5 shadow-sm"
             >
-              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-violet-700">
+              <div className="font-mono text-xs uppercase tracking-[0.3em] text-brand-700">
                 Our low-code POC
               </div>
-              <div className="mt-1 font-display text-4xl font-bold text-violet-700">
+              <div className="mt-1 font-display text-5xl font-bold text-brand-700">
                 2 months
               </div>
             </motion.div>
@@ -113,12 +113,12 @@ function PayoffScene({ step }: { step: number }) {
                 damping: 22,
                 delay: 0.55,
               }}
-              className="rounded-2xl border border-slate-200 bg-white px-6 py-4 shadow-sm"
+              className="rounded-2xl border border-slate-200 bg-white px-8 py-5 shadow-sm"
             >
-              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-slate-500">
+              <div className="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">
                 Their pro-code build
               </div>
-              <div className="mt-1 font-display text-4xl font-bold text-slate-500">
+              <div className="mt-1 font-display text-5xl font-bold text-slate-500">
                 16 months
               </div>
             </motion.div>
@@ -126,7 +126,7 @@ function PayoffScene({ step }: { step: number }) {
         )}
       </AnimatePresence>
 
-      {/* Implication — step 2 */}
+      {/* Implication: step 2 */}
       <AnimatePresence mode="popLayout">
         {showImplication && (
           <motion.p
@@ -136,7 +136,7 @@ function PayoffScene({ step }: { step: number }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 12 }}
             transition={layoutSpring}
-            className="mt-10 max-w-[60ch] text-lg text-slate-600"
+            className="mt-10 max-w-[60ch] text-2xl text-slate-600"
           >
             And this was a{" "}
             <span className="font-semibold text-slate-900">global project</span>
@@ -159,11 +159,11 @@ function PayoffSlide({ step }: SlideProps) {
 export const slide27: SlideEntry = {
   meta: {
     id: "17-payoff",
-    title: "The payoff — €80k saved per site",
+    title: "The payoff: €80k saved per site",
     section: "Act 3 · Proof",
     steps: 3,
     notes:
-      "Climactic payoff slide for the QA story. 3 click steps:\n\n• Step 1 (load): 'The payoff' eyebrow + 'EUR 80K SAVED / per site, per year.' (huge shimmering headline, gradient text). Say: 'Across all the changeovers, all the lines, all the years — this is what the reorder buys.'\n• Step 2: Time comparison appears — '2 MONTHS / our low-code POC' vs '16 MONTHS / their pro-code build'. Say: 'The pro-code team took eight times longer to build a worse solution. Eight times.'\n• Step 3: Implication appears — 'And this was a global project. The savings multiply across every site that runs it.' Say: 'Now multiply that by every plant in the company.'\n\nThen pause. Let the number land. Click to slide 18 (companies).\n\n(Currency confirmed EUR, not USD.)",
+      "Climactic payoff slide for the QA story. 3 click steps:\n\n• Step 1 (load): 'The payoff' eyebrow + 'EUR 80K SAVED / per site, per year.' (huge shimmering headline, gradient text). Say: 'Across all the changeovers, all the lines, all the years: this is what the reorder buys.'\n• Step 2: Time comparison appears: '2 MONTHS / our low-code POC' vs '16 MONTHS / their pro-code build'. Say: 'The pro-code team took eight times longer to build a worse solution. Eight times.'\n• Step 3: Implication appears: 'And this was a global project. The savings multiply across every site that runs it.' Say: 'Now multiply that by every plant in the company.'\n\nThen pause. Let the number land. Click on to 'What's in it for companies'.\n\n(Currency confirmed EUR, not USD.)",
   },
   Component: PayoffSlide,
 };

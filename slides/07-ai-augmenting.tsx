@@ -12,7 +12,7 @@ function AiAugmentingSlide(_: SlideProps) {
       <StatementLayout
         title="AI won't take your job."
         titleAccent="Not yet."
-        body="Eventually almost every job will feel it. For now — and for the next few years at least — AI stays in an augmentation role. You'll do more, faster. It won't replace you."
+        body="Eventually almost every job will feel it. For now, and for the next few years at least, AI stays in an augmentation role. You'll do more, faster. It won't replace you."
       />
     </SlideShell>
   );

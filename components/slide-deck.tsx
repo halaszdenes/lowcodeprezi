@@ -77,9 +77,9 @@ export function SlideDeck() {
                   key={i}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     i === step
-                      ? "w-5 bg-violet-600"
+                      ? "w-5 bg-brand-600"
                       : i < step
-                        ? "w-1.5 bg-violet-300"
+                        ? "w-1.5 bg-brand-300"
                         : "w-1.5 bg-slate-300"
                   }`}
                 />
@@ -92,7 +92,7 @@ export function SlideDeck() {
               onClick={prev}
               disabled={index === 0 && step === 0}
               aria-label="Previous"
-              className="rounded-full px-2 py-1 transition hover:text-violet-600 disabled:opacity-30"
+              className="rounded-full px-2 py-1 transition hover:text-brand-600 disabled:opacity-30"
             >
               ←
             </button>
@@ -104,14 +104,14 @@ export function SlideDeck() {
               onClick={next}
               disabled={index === total - 1 && step === stepCount - 1}
               aria-label="Next"
-              className="rounded-full px-2 py-1 transition hover:text-violet-600 disabled:opacity-30"
+              className="rounded-full px-2 py-1 transition hover:text-brand-600 disabled:opacity-30"
             >
               →
             </button>
             <span className="mx-2 h-3 w-px bg-slate-300" />
             <button
               onClick={() => setOverview(true)}
-              className="rounded-full px-2 py-1 transition hover:text-violet-600"
+              className="rounded-full px-2 py-1 transition hover:text-brand-600"
               title="Overview (Esc)"
             >
               grid
@@ -119,14 +119,27 @@ export function SlideDeck() {
             <a
               href="/outline"
               target="outline"
-              className="rounded-full px-2 py-1 transition hover:text-violet-600"
+              className="rounded-full px-2 py-1 transition hover:text-brand-600"
               title="Outline (O)"
             >
               outline
             </a>
             <button
+              onClick={() =>
+                window.open(
+                  `/notes?slide=${index + 1}`,
+                  "presenter-notes",
+                  "width=720,height=560",
+                )
+              }
+              className="rounded-full px-2 py-1 transition hover:text-brand-600"
+              title="Presenter notes pop-out (N)"
+            >
+              notes
+            </button>
+            <button
               onClick={toggleFullscreen}
-              className="rounded-full px-2 py-1 transition hover:text-violet-600"
+              className="rounded-full px-2 py-1 transition hover:text-brand-600"
               title="Fullscreen (F)"
             >
               {isFullscreen ? "exit" : "full"}

@@ -99,7 +99,7 @@ export function SlideShell({
           className="absolute inset-0 opacity-80"
           style={{
             background:
-              "radial-gradient(ellipse at 20% 25%, rgba(167, 139, 250, 0.32), transparent 55%), radial-gradient(ellipse at 85% 75%, rgba(244, 114, 182, 0.22), transparent 55%), radial-gradient(ellipse at 70% 15%, rgba(125, 211, 252, 0.20), transparent 55%)",
+              "radial-gradient(ellipse at 20% 25%, rgba(45, 149, 230, 0.30), transparent 55%), radial-gradient(ellipse at 85% 75%, rgba(6, 66, 180, 0.16), transparent 55%), radial-gradient(ellipse at 70% 15%, rgba(125, 211, 252, 0.20), transparent 55%)",
             backgroundSize: "200% 200%",
           }}
         />
@@ -122,7 +122,7 @@ export function SlideShell({
         [...Array(10)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute h-1 w-1 rounded-full bg-violet-500"
+            className="absolute h-1 w-1 rounded-full bg-brand-500"
             initial={{
               x: `${(i * 53) % 100}%`,
               y: `${(i * 37) % 100}%`,
@@ -145,21 +145,8 @@ export function SlideShell({
         <div className="relative flex h-full w-full flex-col">{children}</div>
       ) : (
         <div className="relative flex h-full flex-col px-[6%] py-[5%]">
-          {resolvedChip && (
-            <motion.div
-              initial={{ opacity: 0, y: -4 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="mb-5 inline-flex w-fit items-center gap-3 rounded-full border border-violet-300/60 bg-white/70 px-4 py-1.5 font-mono text-[10px] uppercase tracking-[0.25em] text-violet-700 shadow-sm backdrop-blur"
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-500 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-600" />
-              </span>
-              {resolvedChip}
-            </motion.div>
-          )}
-
+          {/* Eyebrow chip removed for a cleaner look; slides still pass
+              `eyebrow`/`chip` props, so restoring it is a one-block revert. */}
           <div className="relative flex flex-1 flex-col">{children}</div>
 
           <motion.div
@@ -170,7 +157,7 @@ export function SlideShell({
           >
             <span>{footerLeft}</span>
             {resolvedFooterRight && (
-              <span className="text-violet-600">{resolvedFooterRight}</span>
+              <span className="text-brand-600">{resolvedFooterRight}</span>
             )}
           </motion.div>
         </div>

@@ -28,7 +28,7 @@ function VibeCodingSlide({ step }: SlideProps) {
                 style={{ fontSize: "clamp(2.6rem, 5.6vw, 5.4rem)" }}
               >
                 Something is even{" "}
-                <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+                <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
                   &ldquo;lower&rdquo;
                 </span>{" "}
                 than low-code drag-and-drop.
@@ -49,7 +49,7 @@ function VibeCodingSlide({ step }: SlideProps) {
                     className="font-display font-semibold leading-[1.05] tracking-tight"
                     style={{ fontSize: "clamp(2.2rem, 4.4vw, 4rem)" }}
                   >
-                    <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+                    <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
                       Natural language.
                     </span>
                   </motion.p>
@@ -82,7 +82,7 @@ function VibeCodingSlide({ step }: SlideProps) {
                     rotate: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
                     y: { duration: 0.8 },
                   }}
-                  className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent"
+                  className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent"
                   style={{
                     fontFamily: "'Caveat', cursive",
                     fontWeight: 700,
@@ -111,9 +111,9 @@ function VibeCodingSlide({ step }: SlideProps) {
                 >
                   <defs>
                     <linearGradient id="vc-underline" x1="0%" x2="100%" y1="0%" y2="0%">
-                      <stop offset="0%" stopColor="#7c3aed" />
-                      <stop offset="50%" stopColor="#d946ef" />
-                      <stop offset="100%" stopColor="#0ea5e9" />
+                      <stop offset="0%" stopColor="#2d95e6" />
+                      <stop offset="50%" stopColor="#0984e3" />
+                      <stop offset="100%" stopColor="#0642b4" />
                     </linearGradient>
                   </defs>
                   <motion.path
@@ -158,7 +158,7 @@ export const slide15: SlideEntry = {
     section: "Act 2 · The AI question",
     steps: 3,
     notes:
-      "The buzzword reveal. Three steps — a setup statement, a one-word answer, then the buzzword caricature.\n\n• Step 0 (load): 'Something is even \"lower\" than low-code drag-and-drop.' Deadpan. Say: 'Drag-and-drop is already low. But there's something lower.'\n• Step 1: + 'Natural language.' appears below. Say: 'Natural language. You describe what you want — and AI builds it.'\n• Step 2: Everything wipes, the words 'vibe coding' come in big, scrawled, purple gradient, with a hand-drawn underline. Pause. Let the audience react. Then deliver the meta line: 'you're looking at a vibe-coded slide deck right now.' Wait for the laugh / nod.\n\nThis is also a vibe shift — for the next 2-3 slides we're going to scare them a bit before resolving it.",
+      "The buzzword reveal. Three steps: a setup statement, a one-word answer, then the buzzword caricature.\n\n• Step 0 (load): 'Something is even \"lower\" than low-code drag-and-drop.' Deadpan. Say: 'Drag-and-drop is already low. But there's something lower.'\n• Step 1: + 'Natural language.' appears below. Say: 'Natural language. You describe what you want, and AI builds it.'\n• Step 2: Everything wipes, the words 'vibe coding' come in big, scrawled, blue gradient, with a hand-drawn underline. Pause. Let the audience react. Then deliver the meta line: 'you're looking at a vibe-coded slide deck right now.' Wait for the laugh / nod.\n\nThis is also a vibe shift: for the next 2-3 slides we're going to scare them a bit before resolving it.",
   },
   Component: VibeCodingSlide,
 };

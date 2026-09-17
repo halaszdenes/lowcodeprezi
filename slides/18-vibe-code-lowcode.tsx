@@ -43,7 +43,7 @@ export const slide18: SlideEntry = {
     title: "Relax. Low-coders get to vibe-code too",
     section: "Act 2 · The AI question",
     notes:
-      "Resolve the tension. Low-code didn't die — it ATE vibe-coding.\n\nThe options now:\n• Microsoft Copilot built into every Power Platform tool\n• Code Pages / Code Apps (newer, more code-friendly Power Platform surfaces)\n• Dozens of vendor Copilots in adjacent tools\n• MCP servers that take natural-language prompts and produce canvas apps\n\nSo the bridge didn't get torn down. It got an elevator.\n\nBut the bigger argument is on the NEXT slide — coding isn't actually the hard part.",
+      "Resolve the tension. Low-code didn't die: it ATE vibe-coding.\n\nThe options now:\n• Microsoft Copilot built into every Power Platform tool\n• Code Pages / Code Apps (newer, more code-friendly Power Platform surfaces)\n• Dozens of vendor Copilots in adjacent tools\n• MCP servers that take natural-language prompts and produce canvas apps\n\nSo the bridge didn't get torn down. It got an elevator.\n\nBut the bigger argument is on the NEXT slide: coding isn't actually the hard part.",
   },
   Component: VibeCodeLowCodeSlide,
 };

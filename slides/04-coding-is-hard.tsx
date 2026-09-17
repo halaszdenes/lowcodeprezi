@@ -241,7 +241,7 @@ function CodingIsHardSlide(_: SlideProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="font-mono text-sm uppercase tracking-[0.3em] text-violet-700">
+            <p className="font-mono text-sm uppercase tracking-[0.3em] text-brand-700">
               Adding a button
             </p>
             <h1
@@ -249,7 +249,7 @@ function CodingIsHardSlide(_: SlideProps) {
               style={{ fontSize: "clamp(2.6rem, 5.4vw, 4.8rem)" }}
             >
               In code,{" "}
-              <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+              <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
                 this is what it takes.
               </span>
             </h1>
@@ -262,7 +262,7 @@ function CodingIsHardSlide(_: SlideProps) {
             className="max-w-[38ch] text-lg leading-[1.6] text-slate-600"
           >
             Imports. State. A handler. JSX. Twenty lines, four concepts you
-            already had to know — just to put one button on the screen.
+            already had to know, just to put one button on the screen.
           </motion.p>
 
           <motion.div
@@ -301,10 +301,10 @@ function CodingIsHardSlide(_: SlideProps) {
 export const slide04: SlideEntry = {
   meta: {
     id: "04-coding-is-hard",
-    title: "Adding a button — in code",
+    title: "Adding a button: in code",
     section: "Act 1 · Setup",
     notes:
-      "Setup for the side-by-side. Show what it takes to add a button in real code: imports, useState, a handler, JSX. The IDE-style window appears with line-by-line reveal so the audience watches the verbosity accumulate.\n\nSay: 'Quick gut check. Say you want to add a button to your app. Just a button — clicks, counts, that's it. In code, you need to know: how to import things, how to do state, how to write a handler, how JSX works. Twenty lines for one button. Multiply this by every screen, every field, every interaction.'\n\nNo step-based reveal — everything enters in one ~2s sequence. Next slide pays this off with the same task in a canvas app.",
+      "Setup for the side-by-side. Show what it takes to add a button in real code: imports, useState, a handler, JSX. The IDE-style window appears with line-by-line reveal so the audience watches the verbosity accumulate.\n\nSay: 'Quick gut check. Say you want to add a button to your app. Just a button: clicks, counts, that's it. In code, you need to know: how to import things, how to do state, how to write a handler, how JSX works. Twenty lines for one button. Multiply this by every screen, every field, every interaction.'\n\nNo step-based reveal: everything enters in one ~2s sequence. Next slide pays this off with the same task in a canvas app.",
   },
   Component: CodingIsHardSlide,
 };

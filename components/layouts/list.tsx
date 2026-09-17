@@ -4,12 +4,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { ReactNode } from "react";
 
 const HUES = [
-  "from-violet-300 to-fuchsia-200",
-  "from-pink-300 to-rose-200",
+  "from-brand-300 to-brand-200",
+  "from-brand-400 to-sky-300",
   "from-sky-300 to-cyan-200",
   "from-emerald-300 to-teal-200",
   "from-amber-300 to-orange-200",
-  "from-indigo-300 to-violet-200",
+  "from-cyan-300 to-teal-200",
 ];
 
 export type ListItem = {
@@ -56,7 +56,7 @@ export function ListLayout({
           {titleAccent && (
             <>
               {" "}
-              <span className="shimmer-text bg-gradient-to-r from-violet-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent">
+              <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
                 {titleAccent}
               </span>
             </>
@@ -109,7 +109,7 @@ export function ListLayout({
                         ease: [0.22, 1, 0.36, 1],
                       }
                 }
-                className="group relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur-sm transition-colors duration-200 hover:border-violet-400 hover:bg-white"
+                className="group relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur-sm transition-colors duration-200 hover:border-brand-400 hover:bg-white"
               >
                 <div className="flex items-center gap-5">
                   <span

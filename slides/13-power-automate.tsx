@@ -25,7 +25,7 @@ function PowerAutomateSlide(_: SlideProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="font-mono text-sm uppercase tracking-[0.3em] text-violet-700">
+            <p className="font-mono text-sm uppercase tracking-[0.3em] text-brand-700">
               The wiring in the walls
             </p>
             <h1
@@ -45,7 +45,7 @@ function PowerAutomateSlide(_: SlideProps) {
               How it triggers
             </p>
             <p className="mt-2 text-2xl leading-snug text-slate-700">
-              Event-based or scheduled — &ldquo;when X happens, do Y.&rdquo;
+              Event-based or scheduled: &ldquo;when X happens, do Y.&rdquo;
             </p>
           </motion.div>
 
@@ -68,7 +68,7 @@ function PowerAutomateSlide(_: SlideProps) {
                     duration: 0.35,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="rounded-full border border-violet-200 bg-violet-50 px-3.5 py-1.5 text-base font-medium text-violet-700"
+                  className="rounded-full border border-brand-200 bg-brand-50 px-3.5 py-1.5 text-base font-medium text-brand-700"
                 >
                   {c}
                 </motion.span>
@@ -86,7 +86,7 @@ function PowerAutomateSlide(_: SlideProps) {
               Example
             </p>
             <p className="mt-2 text-xl leading-snug text-slate-800">
-              Email arrives <span className="text-violet-600">→</span> save
+              Email arrives <span className="text-brand-600">→</span> save
               attachment to SharePoint.
             </p>
           </motion.div>
@@ -118,10 +118,10 @@ function PowerAutomateSlide(_: SlideProps) {
 export const slide13: SlideEntry = {
   meta: {
     id: "13-power-automate",
-    title: "Power Automate — the wiring",
+    title: "Power Automate: the wiring",
     section: "Act 2 · The AI question",
     notes:
-      "Tool 3 of 3. Power Automate is the boring magic — the stuff that runs at 2am while nobody's watching.\n\nSay: 'Third — Power Automate. This is the wiring in the walls. Trigger-action, or on a schedule. When email arrives, save the attachment to SharePoint. When a row gets added to a SQL table, send a Teams message. Thousands of connectors — Microsoft tools, third-party SaaS, custom APIs. This is what saves your colleagues the manual click-click-click work nobody wants to do.'\n\n~40s. End with: 'OK — three tools. That's most of the platform. Now back to the real question — what about AI?'",
+      "Tool 3 of 3. Power Automate is the boring magic: the stuff that runs at 2am while nobody's watching.\n\nSay: 'Third: Power Automate. This is the wiring in the walls. Trigger-action, or on a schedule. When email arrives, save the attachment to SharePoint. When a row gets added to a SQL table, send a Teams message. Thousands of connectors: Microsoft tools, third-party SaaS, custom APIs. This is what saves your colleagues the manual click-click-click work nobody wants to do.'\n\n~40s. End with: 'OK, three tools. That's most of the platform. Now back to the real question: what about AI?'",
   },
   Component: PowerAutomateSlide,
 };

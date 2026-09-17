@@ -80,7 +80,7 @@ function CompartmentHighlight({
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.5 }}
-          className="absolute left-1/2 top-[105%] -translate-x-1/2 rounded-md px-2 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-lg"
+          className="absolute left-1/2 top-[105%] -translate-x-1/2 rounded-md px-2.5 py-1 text-sm font-bold uppercase tracking-wider text-white shadow-lg"
           style={{ background: accent, whiteSpace: "nowrap" }}
         >
           {label}
@@ -119,20 +119,20 @@ function CanvasAppCard({
     >
       <div className="flex items-center gap-2">
         <span
-          className="flex h-7 w-7 items-center justify-center rounded-md text-xs font-bold text-white"
+          className="flex h-8 w-8 items-center justify-center rounded-md text-sm font-bold text-white"
           style={{ background: accent }}
         >
           ⚡
         </span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-slate-500">
+        <span className="font-mono text-xs uppercase tracking-[0.25em] text-slate-500">
           Canvas App
         </span>
       </div>
-      <div className="mt-3 text-sm uppercase tracking-wider text-slate-500">
+      <div className="mt-3 text-base uppercase tracking-wider text-slate-500">
         {label}
       </div>
       <div
-        className="mt-1 font-display text-3xl font-bold leading-tight"
+        className="mt-1 font-display text-4xl font-bold leading-tight"
         style={{ color: accent }}
       >
         {message}{" "}
@@ -148,7 +148,7 @@ function ShelfScene({ step }: { step: number }) {
 
   // Measure the available stage area and compute the largest image size
   // that (a) fits within IMAGE_AREA_RATIO of the stage width and (b) fits
-  // within the stage height. Always maintains aspect ratio — never crops.
+  // within the stage height. Always maintains aspect ratio: never crops.
   useEffect(() => {
     const compute = () => {
       const el = stageRef.current;
@@ -174,7 +174,7 @@ function ShelfScene({ step }: { step: number }) {
   const showPlacement = step >= 1;
   const showRetrieval = step >= 2;
 
-  const PLACE_ACCENT = "#7c3aed"; // violet
+  const PLACE_ACCENT = "#0984e3"; // brand blue
   const PICK_ACCENT = "#ef4444"; // red
 
   return (
@@ -184,7 +184,10 @@ function ShelfScene({ step }: { step: number }) {
         layout
         transition={{ type: "spring", stiffness: 180, damping: 26 }}
       >
-        <h1 className="font-display text-3xl font-semibold leading-tight tracking-tight text-slate-900">
+        <h1
+          className="font-display font-semibold leading-tight tracking-tight text-slate-900"
+          style={{ fontSize: "clamp(2rem, 3.6vw, 3rem)" }}
+        >
           The new shelf system
         </h1>
       </motion.div>
@@ -194,7 +197,7 @@ function ShelfScene({ step }: { step: number }) {
         ref={stageRef}
         className="flex flex-1 items-center justify-center gap-8"
       >
-        {/* Image container — exact pixel size, so % overlays line up perfectly */}
+        {/* Image container: exact pixel size, so % overlays line up perfectly */}
         <div
           className="relative shrink-0 overflow-hidden rounded-2xl border border-slate-200 shadow-md"
           style={{
@@ -242,7 +245,7 @@ function ShelfScene({ step }: { step: number }) {
           )}
         </div>
 
-        {/* Workflow cards column — stacked, full available height */}
+        {/* Workflow cards column: stacked, full available height */}
         <div className="flex flex-1 flex-col justify-center gap-4">
           <AnimatePresence>
             {showPlacement && (
@@ -273,9 +276,9 @@ function ShelfScene({ step }: { step: number }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="rounded-2xl border border-dashed border-slate-200 p-5 text-center text-sm text-slate-400"
+              className="rounded-2xl border border-dashed border-slate-200 p-6 text-center text-base text-slate-400"
             >
-              <div className="font-mono text-[10px] uppercase tracking-[0.25em]">
+              <div className="font-mono text-xs uppercase tracking-[0.25em]">
                 Canvas App
               </div>
               <div className="mt-2">
@@ -304,11 +307,11 @@ function ShelfSystemSlide({ step }: SlideProps) {
 export const slide26: SlideEntry = {
   meta: {
     id: "17-shelf-system",
-    title: "The new shelf system — labeled compartments, app-directed",
+    title: "The new shelf system: labeled compartments, app-directed",
     section: "Act 3 · Proof",
     steps: 3,
     notes:
-      "Shows the actual physical implementation of the QA fix — a real photo of the shelf we built, with the Canvas App workflow cards beside it. 3 click steps:\n\n• Step 1 (load): Title + photo of the full shelf (all 3 rows A/B/C, 21 compartments visible). Empty-state hint card on the right says 'Press → to see the placement workflow.' Say: 'Here's what we actually built. 21 labeled compartments. Each one has a place on the shelf and a place in the database.'\n• Step 2: Violet highlight pulses on compartment B3. The first Canvas App card slides in from the right: ⚡ Canvas App · New sample arrives · Place in B3. Say: 'When QA collects a sample, the app tells the operator exactly which compartment.'\n• Step 3: Red highlight on A3 (high-risk). Second Canvas App card slides in below the first. Both highlights visible. Say: 'When it's time to inspect, the app picks the next sample — high-risk first, every time.'\n\nKey beats:\n— 'It's not a FIFO shelf anymore. It's an addressable, app-driven queue.'\n— 'No more guessing which sample is next. The algorithm makes the call.'",
+      "Shows the actual physical implementation of the QA fix: a real photo of the shelf we built, with the Canvas App workflow cards beside it. 3 click steps:\n\n• Step 1 (load): Title + photo of the full shelf (all 3 rows A/B/C, 21 compartments visible). Empty-state hint card on the right says 'Press → to see the placement workflow.' Say: 'Here's what we actually built. 21 labeled compartments. Each one has a place on the shelf and a place in the database.'\n• Step 2: Blue highlight pulses on compartment B3. The first Canvas App card slides in from the right: ⚡ Canvas App · New sample arrives · Place in B3. Say: 'When QA collects a sample, the app tells the operator exactly which compartment.'\n• Step 3: Red highlight on A3 (high-risk). Second Canvas App card slides in below the first. Both highlights visible. Say: 'When it's time to inspect, the app picks the next sample: high-risk first, every time.'\n\nKey beats:\n• 'It's not a FIFO shelf anymore. It's an addressable, app-driven queue.'\n• 'No more guessing which sample is next. The algorithm makes the call.'",
   },
   Component: ShelfSystemSlide,
 };
