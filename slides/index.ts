@@ -34,6 +34,7 @@ import { slide24 } from "./24-qa-fix";
 import { slide25 } from "./25-sample-pattern";
 import { slide26 } from "./26-shelf-system";
 import { slide27 } from "./27-payoff";
+import { slide27b } from "./27b-how-to-get-started";
 import { slide28 } from "./28-companies";
 import { slide29 } from "./29-where-to-start";
 import { slide29b } from "./29b-leveraging-role";
@@ -85,6 +86,7 @@ export const slides: SlideEntry[] = [
   slide26,
   slide27,
   slide28,
+  slide27b,
   slide29,
   slide29b,
   slide29c,

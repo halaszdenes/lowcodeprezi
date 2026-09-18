@@ -42,9 +42,9 @@ export const slide28: SlideEntry = {
   meta: {
     id: "14-companies",
     title: "What's in it for companies",
-    section: "Act 4 · What to do Monday",
+    section: "Act 3 · Proof",
     notes:
-      "Land this right after the QA story while the audience is thinking 'great, but my boss won't let me.'\n\nThe pitch to your manager:\n• CHEAPER: no consulting engagement, no IT backlog\n• FASTER: weeks not quarters\n• LESS RISK: built by someone who knows the process, validated in days\n• EASY POC: show the working thing, then decide whether to invest\n\nFrame this as a TOOL the audience can use on Monday: 'here's exactly what to say in the meeting.'",
+      "Right now you're thinking: great, but my boss won't let me. Here's exactly what to say in that meeting.\n\n• Cheaper: no consulting engagement, no IT backlog, no six-figure developer for a leave-request form.\n• Faster: weeks, not quarters. A working prototype on Friday, not next fiscal year.\n• Less risk: built by someone who actually knows the process, validated by the team that uses it.\n• Easy proof of concept: ship the thing, see if it sticks, then decide whether to invest more.\n• Frame it as a tool they can use on Monday.\n\nHOW TO GET STARTED",
   },
   Component: CompaniesSlide,
 };

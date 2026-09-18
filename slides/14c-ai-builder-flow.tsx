@@ -212,7 +212,7 @@ export const slide14c: SlideEntry = {
     title: "AI Builder: one smart step inside the flow",
     section: "Act 2 · The AI question",
     notes:
-      "Same machine as the previous slide, with ONE smart step dropped into the pipeline.\n\nWalk it through: an email arrives, AI Builder reads it and answers a single question (support, sales or billing?), and the flow routes on the answer. Watch the branches light up: every email travels one of three known paths. The AI never decides WHAT happens next; it answers the question, the flow does the routing.\n\nThe mental model: predictable frame, smart filling. Because the output is structured (one category), the rest of the flow can safely build on it.\n\nLeft side, the other one-step jobs: classify, extract (invoice fields from a PDF), summarize, sentiment, translate. All well bounded, all return structure.\n\nSay: 'For most real automations, this is the sweet spot. You get the benefit of AI without giving up the deterministic backbone.' Next: what happens when you DO hand over the backbone.",
+      "Same flow, with one smart step dropped in. An email arrives, AI Builder answers a single question, support, sales or billing, and the flow routes on the answer.\n\n• The AI never decides what happens next. It answers a question; the flow does the routing. Predictable frame, smart filling.\n• Because the output is structured, one category, the rest of the flow can safely build on it.\n• Other one-step jobs: classify, extract invoice fields from a PDF, summarise, sentiment, translate.\n• Close: 'For most real automations this is the sweet spot. You get AI without giving up the deterministic backbone.'",
   },
   Component: AiBuilderFlowSlide,
 };

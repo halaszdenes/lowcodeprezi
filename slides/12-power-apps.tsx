@@ -103,7 +103,7 @@ export const slide12: SlideEntry = {
     title: "Power Apps: build the tool",
     section: "Act 2 · The AI question",
     notes:
-      "Tool 2 of 3. This is where 'drag a button' from earlier pays off: they just saw it on the canvas-button slide. Now we name the tool.\n\nSay: 'Second one: Power Apps. This is where you build the actual tools your team uses. Canvas apps means you drag and drop the UI: forms, buttons, galleries. Typical use cases: data entry, approvals, booking the parking space, requesting holiday. The unsexy line-of-business apps that every company has fifty of and that pay your salary.'\n\n~40s. The screenshot does a lot of work: let them see it.",
+      "Second: Power Apps. This is where you build the actual tools your team uses. Canvas apps means you drag and drop the interface: forms, buttons, galleries.\n\n• Typical use cases: data entry and approvals, booking desks and parking, requesting holiday or expenses.\n• These are the unsexy line-of-business apps every company has fifty of, and they pay your salary.",
   },
   Component: PowerAppsSlide,
 };

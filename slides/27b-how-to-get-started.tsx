@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import type { SlideEntry, SlideProps } from "@/lib/slide-types";
 import { SlideShell } from "@/components/slide-shell";
 
-function TrueStorySlide(_: SlideProps) {
+function HowToGetStartedSlide(_: SlideProps) {
   return (
-    <SlideShell eyebrow="Act 3 · Proof">
+    <SlideShell eyebrow="Act 4 · What to do Monday">
       <div className="flex h-full flex-col items-center justify-center gap-10">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -15,13 +15,12 @@ function TrueStorySlide(_: SlideProps) {
           className="text-center font-display font-semibold leading-[1.02] tracking-[-0.02em] text-slate-900"
           style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)" }}
         >
-          Let me tell you{" "}
+          How to{" "}
           <span className="shimmer-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-700 bg-clip-text text-transparent">
-            a true story.
+            get started.
           </span>
         </motion.h1>
 
-        {/* A simple animated underline that draws beneath the title */}
         <svg
           viewBox="0 0 600 30"
           preserveAspectRatio="none"
@@ -29,7 +28,7 @@ function TrueStorySlide(_: SlideProps) {
           style={{ width: "min(60vw, 720px)", height: "1.6rem" }}
         >
           <defs>
-            <linearGradient id="ts-line" x1="0%" x2="100%" y1="0%" y2="0%">
+            <linearGradient id="gs-line" x1="0%" x2="100%" y1="0%" y2="0%">
               <stop offset="0%" stopColor="#0984e3" stopOpacity="0" />
               <stop offset="50%" stopColor="#2d95e6" />
               <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0" />
@@ -37,7 +36,7 @@ function TrueStorySlide(_: SlideProps) {
           </defs>
           <motion.path
             d="M 20 15 L 580 15"
-            stroke="url(#ts-line)"
+            stroke="url(#gs-line)"
             strokeWidth="3"
             strokeLinecap="round"
             initial={{ pathLength: 0, opacity: 0 }}
@@ -52,23 +51,23 @@ function TrueStorySlide(_: SlideProps) {
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ delay: 2.0, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center text-2xl font-medium text-slate-600"
         >
-          How low-code creates real value, without a single AI step.
+          What to do on Monday, whether or not you already have an office job.
         </motion.p>
       </div>
     </SlideShell>
   );
 }
 
-export const slide21: SlideEntry = {
+export const slide27b: SlideEntry = {
   meta: {
-    id: "21-true-story",
-    title: "Let me tell you a true story",
-    section: "Act 3 · Proof",
+    id: "27b-how-to-get-started",
+    title: "How to get started",
+    section: "Act 4 · What to do Monday",
     notes:
-      "OK, theory done. Let me tell you a true story. Real company, real problem, real numbers.\n\n• After a whole act about AI, the subtitle is the point: the biggest saving in this talk needed none of it.\n• Under ten seconds; this slide is a breath, not a beat.",
+      "That was the proof. Now the practical part: how you get started, whether you already sit in an office job or not.\n\n• Ten seconds. A breath between the case study and the advice.",
   },
-  Component: TrueStorySlide,
+  Component: HowToGetStartedSlide,
 };

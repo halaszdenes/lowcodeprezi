@@ -121,7 +121,7 @@ export const slide13: SlideEntry = {
     title: "Power Automate: the wiring",
     section: "Act 2 · The AI question",
     notes:
-      "Tool 3 of 3. Power Automate is the boring magic: the stuff that runs at 2am while nobody's watching.\n\nSay: 'Third: Power Automate. This is the wiring in the walls. Trigger-action, or on a schedule. When email arrives, save the attachment to SharePoint. When a row gets added to a SQL table, send a Teams message. Thousands of connectors: Microsoft tools, third-party SaaS, custom APIs. This is what saves your colleagues the manual click-click-click work nobody wants to do.'\n\n~40s. End with: 'OK, three tools. That's most of the platform. Now back to the real question: what about AI?'",
+      "Third: Power Automate, the wiring in the walls. Trigger and action, or on a schedule. When an email arrives, save the attachment to SharePoint. When a row lands in a SQL table, send a Teams message.\n\n• Over a thousand connectors: Microsoft tools, third-party SaaS, custom APIs.\n• This is what saves your colleagues the click-click-click work nobody wants to do.\n• Close: 'Three tools. That's most of the platform. Now, why do companies actually buy it?'",
   },
   Component: PowerAutomateSlide,
 };

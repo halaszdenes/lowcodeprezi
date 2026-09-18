@@ -177,7 +177,7 @@ export const slide14: SlideEntry = {
     section: "Act 2 · The AI question",
     steps: 5,
     notes:
-      "Punchline of the Power Platform tour. The audience just saw the tools: now make the case for why companies actually bought them. Four word labels. Stepped reveal.\n\n• Step 1 (load): Title only. Say: 'OK so you've seen the toolbox. Here's why companies are actually obsessed with it. Four words.'\n• Step 2: + 'Cheaper'. Say: 'Cheaper. Fewer six-figure devs, lower licensing, less infrastructure to maintain.'\n• Step 3: + 'Faster'. Say: 'Faster. What pro-code teams ship in quarters, you ship in days.'\n• Step 4: + 'Less risk'. Say: 'Less risk. Small bets: if it doesn't work, you killed three days of work, not three months.'\n• Step 5: + 'Easy to PoC'. Say: 'And easy to prototype. Test the idea Monday, demo it Friday. If the demo lands, you turn it into the real thing. If it doesn't, you move on.'\n\nClose with: 'That's the company side. Now, what about the elephant: AI?' → leads into the automation + AI block (Power Automate, AI Builder, Copilot Studio, deterministic vs agentic), then vibe coding.",
+      "You've seen the toolbox. Here's why companies are obsessed with it. Four words. [one click each]\n\n• Cheaper: fewer six-figure developers, lower licensing, less infrastructure to maintain.\n• Faster: what pro-code teams ship in quarters, you ship in days.\n• Less risk: small bets. If it doesn't work, you lost three days, not three months.\n• Easy to prototype: test the idea Monday, demo it Friday. If the demo lands, make it real. If not, move on.\n\nClose: 'That's the company side. Now, what about the elephant: AI?'",
   },
   Component: WhatsInItForCompaniesSlide,
 };

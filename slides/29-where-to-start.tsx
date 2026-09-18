@@ -48,7 +48,7 @@ export const slide29: SlideEntry = {
     title: "Start with Power BI",
     section: "Act 4 · What to do Monday",
     notes:
-      "Practical path. Make it feel achievable.\n\nThe ladder:\n1. Excel → Power Query (you already do this; just learn the better tool)\n2. Power Query → DAX → first dashboard\n3. Dashboard → Power Apps (when you need data entry)\n4. Power Apps → Power Automate (when you need workflow)\n5. Bonus: Copilot lowers the bar at every step: 'create a measure that shows month-over-month change' → done\n\nKey: don't ask permission. Build something useful for yourself first.",
+      "If you know Excel, start with Power BI. The ladder is short.\n\n• Excel to Power Query: you already do this work; you're just learning the better tool.\n• Power Query to DAX: DAX is Excel formulas with superpowers.\n• DAX to your first dashboard: migrate one report you already own and feel the difference.\n• Then Power Apps when you need data entry, and Power Automate when you need things to happen automatically.\n• Copilot lowers the bar at every step: ask it for 'a measure that shows month-over-month change' and it's done.\n• Don't ask permission. Build something useful for yourself first.",
   },
   Component: WhereToStartSlide,
 };

@@ -24,7 +24,7 @@ export const slide31: SlideEntry = {
     title: "Your move this week",
     section: "Act 4 · What to do Monday",
     notes:
-      "Make the CTA small enough that nobody can say 'I don't have time.'\n\nNot 'start a YouTube channel.' Not 'learn the whole platform.'\n\nOne Excel file. This week. That's it.\n\nThe people who do it will be back next year telling you a different story.",
+      "Not 'start a YouTube channel'. Not 'learn the whole platform'. Pick one Excel file you hate and migrate it to Power BI this week. One file. Seven days. The rest builds itself.\n\n• Make it small enough that nobody in the room can say they don't have time.\n• The people who do it will be back next year telling a different story.",
   },
   Component: CtaSlide,
 };

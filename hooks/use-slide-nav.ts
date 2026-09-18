@@ -168,7 +168,7 @@ export function useSlideNav({ slides }: Options) {
           window.open(
             `/notes?slide=${index + 1}`,
             "presenter-notes",
-            "width=720,height=560",
+            "width=1180,height=760",
           );
           break;
         case "o":

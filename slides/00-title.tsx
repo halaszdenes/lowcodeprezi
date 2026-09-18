@@ -26,7 +26,7 @@ export const slide00: SlideEntry = {
     title: "Low-Code, Big Impact",
     section: "Title",
     notes:
-      "Opening line: 'How many of you have ever waited 6 months for IT to build something you needed in your job?'\n\nWait for hands. This is the hook.",
+      "How many of you have waited six months for IT to build something you needed for your job? Keep your hand up if it was longer than a year.\n\nThat gap is what this talk is about. You are going to close it yourself.",
   },
   Component: TitleSlide,
 };

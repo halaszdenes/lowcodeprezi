@@ -76,7 +76,7 @@ export const slide00b: SlideEntry = {
     title: "Thank you to our sponsors",
     section: "Title",
     notes:
-      "Sponsor thank-you, before the bio. Eight logos on white cards, the event logo top right. Keep it to 15 seconds: 'Before anything else: thank you to the sponsors who make M365 Twin Cities possible.' Name any sponsor the organisers asked you to call out, then move on.",
+      "Before anything else: thank you to the sponsors who make M365 Twin Cities possible.\n\n• Call out any sponsor the organisers asked you to mention by name.\n• Fifteen seconds, then move on.",
   },
   Component: SponsorsSlide,
 };

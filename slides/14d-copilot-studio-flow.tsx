@@ -325,7 +325,7 @@ export const slide14d: SlideEntry = {
     title: "Copilot Studio: one agent, many paths",
     section: "Act 2 · The AI question",
     notes:
-      "The agent version of the same email problem. You don't draw the branches: the agent reads each email, works out the intent and calls its tools; every result comes back to the loop and it decides again. Watch the spokes pulse: knowledge first, a ticket if it's an incident, a reply every time.\n\nTraits on the left: picks its own tools, handles intents you didn't predict, asks follow-ups when unsure, grounded in your own knowledge.\n\nSay: 'Powerful. And every run can be different. That flexibility is exactly what you pay for, in control and in cost.' Keep it to 45 seconds; the next slide makes the comparison explicit.",
+      "Now the agent version of the same email problem. You don't draw the branches. The agent reads the email, works out the intent, and calls its tools; every result comes back to the loop and it decides again.\n\n• It picks its own tools, handles intents you never predicted, asks follow-up questions when unsure, and is grounded in your own knowledge.\n• Powerful, and every run can be different. That flexibility is exactly what you pay for, in control and in cost.\n• Forty-five seconds; the next slide makes the comparison explicit.",
   },
   Component: CopilotStudioFlowSlide,
 };

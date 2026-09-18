@@ -304,7 +304,7 @@ export const slide04: SlideEntry = {
     title: "Adding a button: in code",
     section: "Act 1 · Setup",
     notes:
-      "Setup for the side-by-side. Show what it takes to add a button in real code: imports, useState, a handler, JSX. The IDE-style window appears with line-by-line reveal so the audience watches the verbosity accumulate.\n\nSay: 'Quick gut check. Say you want to add a button to your app. Just a button: clicks, counts, that's it. In code, you need to know: how to import things, how to do state, how to write a handler, how JSX works. Twenty lines for one button. Multiply this by every screen, every field, every interaction.'\n\nNo step-based reveal: everything enters in one ~2s sequence. Next slide pays this off with the same task in a canvas app.",
+      "Quick gut check. Say you want to add a button to your app. Just a button: it clicks, it counts, that's it.\n\nIn code you need to know how to import things, how state works, how to write a handler, and how JSX works. Twenty lines and four concepts for one button. Now multiply that by every screen, every field, every interaction.",
   },
   Component: CodingIsHardSlide,
 };

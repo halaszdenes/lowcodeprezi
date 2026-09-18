@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { slides } from "@/slides";
+import { SlidePreview } from "@/components/slide-preview";
 import {
   PRESENTER_CHANNEL,
   type PresenterMessage,
@@ -169,17 +170,23 @@ export default function NotesPage() {
         </div>
       </header>
 
-      <section className="flex-1 overflow-auto rounded-xl border border-slate-200 bg-slate-50/60 p-6">
+      <div className="grid min-h-0 flex-1 grid-cols-12 gap-6">
+        <div className="col-span-7 flex min-h-0 flex-col">
+      <section className="min-h-0 flex-1 overflow-auto rounded-xl border border-slate-200 bg-slate-50/60 p-6">
         {editing ? (
           <textarea
             value={draft}
             onChange={(e) => setDraft(e.target.value)}
             autoFocus
             spellCheck={false}
-            className="h-full w-full resize-none rounded-lg border border-brand-200 bg-white p-4 font-mono text-[15px] leading-relaxed text-slate-800 outline-none focus:border-brand-400"
+            className="h-full w-full resize-none rounded-lg border border-brand-200 bg-white p-4 font-mono leading-relaxed text-slate-800 outline-none focus:border-brand-400"
+            style={{ fontSize: "clamp(0.95rem, 0.8vw + 0.6vh, 1.6rem)" }}
           />
         ) : displayedNotes ? (
-          <div className="prose max-w-none whitespace-pre-wrap text-base leading-relaxed text-slate-800">
+          <div
+            className="max-w-none whitespace-pre-wrap leading-relaxed text-slate-800"
+            style={{ fontSize: "clamp(1rem, 0.9vw + 0.7vh, 1.9rem)" }}
+          >
             {displayedNotes}
           </div>
         ) : (
@@ -189,12 +196,38 @@ export default function NotesPage() {
           </p>
         )}
       </section>
+        </div>
 
-      {upcoming && (
-        <footer className="rounded-xl border border-slate-200 bg-slate-50/40 p-4 text-sm text-slate-500">
-          Next ▸ {upcoming.meta.title}
-        </footer>
-      )}
+        <aside className="col-span-5 flex min-h-0 flex-col gap-5 overflow-auto">
+          <div>
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.25em] text-slate-500">
+              Now · slide {index + 1}
+              {(current?.meta.steps ?? 1) > 1 ? ` · step ${step + 1} / ${current?.meta.steps}` : ""}
+            </p>
+            {current && (
+              <SlidePreview entry={current} index={index} total={slides.length} step={step} />
+            )}
+          </div>
+          <div>
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.25em] text-brand-700">
+              Next ▸ {upcoming ? upcoming.meta.title : "End of deck"}
+            </p>
+            {upcoming ? (
+              <SlidePreview
+                key={upcoming.meta.id}
+                entry={upcoming}
+                index={index + 1}
+                total={slides.length}
+                step={0}
+              />
+            ) : (
+              <div className="flex aspect-video items-center justify-center rounded-lg border border-dashed border-slate-200 font-mono text-xs uppercase tracking-[0.25em] text-slate-400">
+                last slide
+              </div>
+            )}
+          </div>
+        </aside>
+      </div>
     </div>
   );
 }

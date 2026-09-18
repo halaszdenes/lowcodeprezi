@@ -163,7 +163,7 @@ export const slide27: SlideEntry = {
     section: "Act 3 · Proof",
     steps: 3,
     notes:
-      "Climactic payoff slide for the QA story. 3 click steps:\n\n• Step 1 (load): 'The payoff' eyebrow + 'EUR 80K SAVED / per site, per year.' (huge shimmering headline, gradient text). Say: 'Across all the changeovers, all the lines, all the years: this is what the reorder buys.'\n• Step 2: Time comparison appears: '2 MONTHS / our low-code POC' vs '16 MONTHS / their pro-code build'. Say: 'The pro-code team took eight times longer to build a worse solution. Eight times.'\n• Step 3: Implication appears: 'And this was a global project. The savings multiply across every site that runs it.' Say: 'Now multiply that by every plant in the company.'\n\nThen pause. Let the number land. Click on to 'What's in it for companies'.\n\n(Currency confirmed EUR, not USD.)",
+      "Across all the changeovers, all the lines, all the years, this is what the reorder buys: eighty thousand euros per site, per year. [click] Our low-code proof of concept took two months. The pro-code team's build took sixteen, and delivered a worse solution. Eight times longer. [click] And this was a global project. Multiply that by every plant in the company.\n\n• Currency is euros, not dollars.\n• Pause and let the number land before moving on.",
   },
   Component: PayoffSlide,
 };

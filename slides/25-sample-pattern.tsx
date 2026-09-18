@@ -411,7 +411,7 @@ export const slide25: SlideEntry = {
     section: "Act 3 · Proof",
     steps: 5,
     notes:
-      "Extra visual aid showing the reorder pattern across many sampling rounds (not just one round like slides 14-15). 5 click steps:\n\n• Step 1 (load): Top row only: samples 1, 2, 3, 4, 5, …, 48, 49, 50 in FIFO order. Each shown as: number box + paper bag + small status dot (green/amber/red for low/medium/high risk). Samples 4 and 49 already styled as flagged (red border on the number box).\n• Step 2: First red 'HIGH RISK / OF NON-APPROVAL' label appears above sample 4 with a pointing tip.\n• Step 3: Second 'HIGH RISK' label appears above sample 49.\n• Step 4: Two red curved arrows draw from the labels down to where samples 4 and 49 will land in the new order.\n• Step 5: Bottom row fades up: samples reordered as 4, 49, 1, 2, 3, …, 5, 48, 50. High-risk samples now at the front of the queue.\n\nKey lines to land:\n• 'This is one sampling round multiplied by hundreds. Same pattern.'\n• 'We didn't change WHAT we inspect, only the ORDER.'\n• 'Two lines of Power Apps code. That's it.'",
+      "That was one sampling round. Multiply it by hundreds. Same pattern every time.\n\n• We didn't change what we inspect, only the order.\n• The high-risk samples move to the front; everything else stays first in, first out.\n• Two lines of Power Apps logic. That's the whole algorithm.",
   },
   Component: SamplePatternSlide,
 };

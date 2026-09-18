@@ -158,7 +158,7 @@ export const slide15: SlideEntry = {
     section: "Act 2 · The AI question",
     steps: 3,
     notes:
-      "The buzzword reveal. Three steps: a setup statement, a one-word answer, then the buzzword caricature.\n\n• Step 0 (load): 'Something is even \"lower\" than low-code drag-and-drop.' Deadpan. Say: 'Drag-and-drop is already low. But there's something lower.'\n• Step 1: + 'Natural language.' appears below. Say: 'Natural language. You describe what you want, and AI builds it.'\n• Step 2: Everything wipes, the words 'vibe coding' come in big, scrawled, blue gradient, with a hand-drawn underline. Pause. Let the audience react. Then deliver the meta line: 'you're looking at a vibe-coded slide deck right now.' Wait for the laugh / nod.\n\nThis is also a vibe shift: for the next 2-3 slides we're going to scare them a bit before resolving it.",
+      "Drag and drop is already low. But there is something lower. [click] Natural language. You describe what you want, and AI builds it. [click] They call it vibe coding.\n\n• Pause for the reaction, then: 'You are looking at a vibe-coded slide deck right now.' Wait for the laugh.\n• Tone shift: for the next two slides we scare them a little before resolving it.",
   },
   Component: VibeCodingSlide,
 };

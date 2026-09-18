@@ -153,7 +153,7 @@ export const slide14b: SlideEntry = {
     title: "Power Automate, step by step",
     section: "Act 2 · The AI question",
     notes:
-      "Recap beat, ten seconds, before AI enters the flow. A real flow drawn the way the Power Automate designer shows it: an email arrives, its attachments land in SharePoint, a Power BI dataset refreshes so the report is current. Three connectors, zero AI, real business value.\n\nGlide over the three points: deterministic (same input, same result, every run), auditable (run history shows every step), cheap at scale (thousands of runs a day, no reasoning cost).\n\nSay: 'This is what most business automation actually looks like. Nobody posts about it on LinkedIn, and nothing beats it for this kind of work. Now let's put AI into it.'",
+      "This is what most business automation actually looks like. An email arrives, its attachments land in SharePoint, a Power BI dataset refreshes so the report is current. Three connectors, zero AI, real business value.\n\n• Same input, same result, every run. The flow can't get creative, and that is its strength.\n• Every step is in the run history; compliance teams love it.\n• Thousands of runs a day for cents.\n• Ten seconds here. Then: 'Now let's put AI into it.'",
   },
   Component: PowerAutomateFlowSlide,
 };

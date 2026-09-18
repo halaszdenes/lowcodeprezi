@@ -22,7 +22,7 @@ export const slide30e: SlideEntry = {
     title: "Ever thought about going freelance?",
     section: "Act 4 · What to do Monday",
     notes:
-      "Beat slide that opens the freelancing coda. Ask it to the room and take a show of hands: 'Ever thought about going freelance?' Then: 'Keep your hand up if you know what you'd actually be trading.' Most hands drop. That's the next two slides.\n\nKeep it under 30 seconds. Next: the pros and cons, and the sweet spot in the middle.",
+      "Ever thought about going freelance? Show of hands. Keep your hand up if you know what you'd actually be trading.\n\n• Most hands drop. That's the next two slides.\n• Under thirty seconds.",
   },
   Component: FreelanceQuestionSlide,
 };

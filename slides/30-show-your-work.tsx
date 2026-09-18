@@ -34,7 +34,7 @@ export const slide30: SlideEntry = {
     title: "Show your work: internally",
     section: "Act 4 · What to do Monday",
     notes:
-      "For business / citizen-dev folks, internal visibility is the career lever. Not blogs, not YouTube: that's for influencers.\n\nIdeas:\n• Demo days / lunch & learns\n• A Teams channel for your wins\n• A dashboard pinned to a hallway TV\n• Monthly update to your manager: 'here's what I shipped and what it saved'\n• Volunteer to help adjacent teams once you have wins\n\nThis is also how you protect yourself: if leadership knows what you've built, you don't get hit when the next reorg comes.",
+      "For people in business roles, internal visibility is the career lever. Not blogs, not YouTube; that's for influencers.\n\n• 'I saved this team ten hours a week', said in front of the right manager in the right room, is worth more than a thousand likes.\n• Ways to do it: demo days and lunch-and-learns, a Teams channel for your wins, a dashboard on a hallway screen, a monthly note to your manager on what you shipped and what it saved, helping the neighbouring team once you have wins.\n• It also protects you: when leadership knows what you built, you're not the one hit in the next reorg.",
   },
   Component: ShowYourWorkSlide,
 };

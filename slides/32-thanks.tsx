@@ -78,7 +78,7 @@ export const slide32: SlideEntry = {
     title: "Thanks + Q&A",
     section: "Act 4 · What to do Monday",
     notes:
-      "Q&A slide. Contact details on the left, the session feedback QR on the right.\n\nPoint at the QR before you open the floor: 'While you think of questions, scan this and rate the session. Two minutes, and it decides whether I get to do this again.'\n\nLeave the slide on screen for the entire Q&A so people can grab the email, the LinkedIn handle and the code.",
+      "While you think of questions, scan this and rate the session. Two minutes, and it decides whether I get to do this again.\n\n• Leave this slide up for the whole Q&A so people can grab the email, the LinkedIn handle and the code.",
   },
   Component: ThanksSlide,
 };

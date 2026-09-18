@@ -311,7 +311,7 @@ export const slide26: SlideEntry = {
     section: "Act 3 · Proof",
     steps: 3,
     notes:
-      "Shows the actual physical implementation of the QA fix: a real photo of the shelf we built, with the Canvas App workflow cards beside it. 3 click steps:\n\n• Step 1 (load): Title + photo of the full shelf (all 3 rows A/B/C, 21 compartments visible). Empty-state hint card on the right says 'Press → to see the placement workflow.' Say: 'Here's what we actually built. 21 labeled compartments. Each one has a place on the shelf and a place in the database.'\n• Step 2: Blue highlight pulses on compartment B3. The first Canvas App card slides in from the right: ⚡ Canvas App · New sample arrives · Place in B3. Say: 'When QA collects a sample, the app tells the operator exactly which compartment.'\n• Step 3: Red highlight on A3 (high-risk). Second Canvas App card slides in below the first. Both highlights visible. Say: 'When it's time to inspect, the app picks the next sample: high-risk first, every time.'\n\nKey beats:\n• 'It's not a FIFO shelf anymore. It's an addressable, app-driven queue.'\n• 'No more guessing which sample is next. The algorithm makes the call.'",
+      "Here's what we actually built. Twenty-one labelled compartments; each has a place on the shelf and a place in the database.\n\n[click] When QA collects a sample, the app tells the operator exactly which compartment to put it in. [click] When it's time to inspect, the app picks the next sample: high-risk first, every time.\n\n• It's not a FIFO shelf anymore. It's an addressable, app-driven queue.\n• No more guessing which sample is next; the algorithm makes the call.",
   },
   Component: ShelfSystemSlide,
 };

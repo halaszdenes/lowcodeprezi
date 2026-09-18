@@ -85,7 +85,7 @@ export const slide10: SlideEntry = {
     title: "Power Platform at a glance",
     section: "Act 2 · The AI question",
     notes:
-      "The overview. Audience now has a face for the words. Five logos, one family, all wired into Microsoft 365 and each other.\n\nSay: 'Power Platform is the umbrella. Power BI for data and dashboards. Power Apps to build the actual tools your team uses. Power Automate for workflows that run in the background. Plus Power Pages for portals and Copilot Studio for AI agents: those are newer but same family.'\n\nDon't deep-dive here. Each tool gets its own slide next. ~30s.",
+      "Power Platform is the umbrella. Power BI for data and dashboards, Power Apps to build the tools your team actually uses, Power Automate for workflows in the background. Plus Power Pages for portals and Copilot Studio for AI agents; those are newer but the same family.\n\n• Everything is wired into Microsoft 365, Dataverse, and each other.\n• Don't deep-dive here; the next three slides do that.",
   },
   Component: PowerPlatformGlanceSlide,
 };

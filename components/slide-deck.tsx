@@ -129,7 +129,7 @@ export function SlideDeck() {
                 window.open(
                   `/notes?slide=${index + 1}`,
                   "presenter-notes",
-                  "width=720,height=560",
+                  "width=1180,height=760",
                 )
               }
               className="rounded-full px-2 py-1 transition hover:text-brand-600"

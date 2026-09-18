@@ -229,7 +229,7 @@ export const slide29c: SlideEntry = {
     section: "Act 4 · What to do Monday",
     steps: TOTAL_STEPS,
     notes:
-      "Callback to the Act 2 punchline (slide 'The 2-in-1 advantage'), now made concrete for the office-job audience with a Venn: domain expertise (blue) and low-code skills (green) overlap into high value (light blue, the citizen developer in the middle). Both hexagons slide together on load; bullets come in one click at a time.\n\n• Step 1 (load): Title + the two hexagons meet and the centre lights up. Say: 'Remember the 2-in-1 from earlier? Here's what it looks like for you.'\n• Step 2: 'Domain expertise + low-code skills = high value.' The centre pulses. Say: 'You already own the blue half. It took you years. The green half takes months.'\n• Step 3: 'Business understanding → better solutions.' Say: 'A developer from outside has to be told what the process is. You already know where it breaks.'\n• Step 4: 'The citizen developer', with the sub-line. Say: 'That's the citizen developer: an employee who builds the fix for their own department, because they're the one who understands the problem.'\n\nNote: slide 21 makes the same argument as a text statement. Decide whether to keep both (callback) or shorten that one.",
+      "Remember the two-in-one from earlier? Here's what it looks like for you. [click] You already own the blue half; it took you years. The green half takes months. [click] A developer from outside has to be told what the process is. You already know where it breaks. [click] That's the citizen developer: an employee who builds the fix for their own department, because they're the one who understands the problem.\n\n• Callback, not repetition: keep it to a minute.",
   },
   Component: TwoInOneAdvantageSlide,
 };

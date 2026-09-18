@@ -138,7 +138,7 @@ export const slide05: SlideEntry = {
     title: "Adding a button: in low-code",
     section: "Act 1 · Setup",
     notes:
-      "The payoff to the IDE slide. Same eyebrow shape, same headline structure with one word swapped, same badges with 0s: the contrast does the work.\n\nSay: 'Now the same thing in low-code. In low-code, this is what it takes.' (gesture at GIF as it plays) 'You drag a button onto the canvas. That's it. No imports, no state hooks, no JSX. Same outcome, actually a better one, because that button already works on web, mobile, and tablet without you doing anything extra.'\n\nPause for the contrast to land. Then move on.\n\nNo step-based reveal. GIF auto-plays. ~30-40 seconds tops on this slide.",
+      "Same task in low-code. You drag a button onto the canvas. That's it. No imports, no state, no syntax.\n\n• Same outcome, actually a better one: that button already works on web, mobile and tablet without extra work.\n• Pause and let the contrast land before moving on.",
   },
   Component: CodingIsEasySlide,
 };

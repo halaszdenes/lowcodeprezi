@@ -104,7 +104,7 @@ export const slide11: SlideEntry = {
     title: "Power BI: the data muscle",
     section: "Act 2 · The AI question",
     notes:
-      "Tool 1 of 3. The Hulk metaphor is the joke: Power BI handles the heavy lifting on data.\n\nSay: 'First tool: Power BI. This is your data muscle. Power Query pulls and reshapes the data, DAX is the formula language, and dashboards are the output. The reason people fall in love with it: it handles large datasets, has enterprise security baked in, refreshes itself on schedule, and if you know Excel, DAX is going to feel familiar.'\n\nKeep it tight: ~40s. Don't teach DAX, just establish the tool.",
+      "First tool: Power BI, your data muscle. Power Query pulls and reshapes the data, DAX is the formula language, dashboards are the output.\n\n• Why people fall in love with it: it handles large datasets, has enterprise security built in, refreshes itself on schedule, and if you know Excel, DAX will feel familiar.\n• Don't teach DAX here; just establish the tool.",
   },
   Component: PowerBiSlide,
 };
