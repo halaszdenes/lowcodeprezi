@@ -56,7 +56,7 @@ function SalaryRow({ row }: { row: Row }) {
         >
           ${row.band[0]}k to ${row.band[1]}k
         </div>
-        <div className="mt-2 text-sm text-slate-500">{row.sources}</div>
+        <div className="mt-2 text-base text-slate-600">{row.sources}</div>
       </div>
 
       <div className="col-span-8">
@@ -68,10 +68,10 @@ function SalaryRow({ row }: { row: Row }) {
               className="absolute top-0 flex -translate-x-1/2 flex-col items-center"
               style={{ left: `${pct(t)}%` }}
             >
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-400">
+              <span className="font-mono text-sm font-semibold uppercase tracking-[0.15em] text-slate-700">
                 ${t}k
               </span>
-              <span className="mt-1 h-2 w-px bg-slate-300" />
+              <span className="mt-1 h-2.5 w-px bg-slate-500" />
             </div>
           ))}
           {/* track */}

@@ -1,5 +1,6 @@
 import type { SlideEntry } from "@/lib/slide-types";
 import { slide00 } from "./00-title";
+import { slide00b } from "./00b-sponsors";
 import { slide01 } from "./01-tech-is-hot";
 import { slide02 } from "./02-another-door";
 import { slide02b } from "./02b-salaries";
@@ -49,6 +50,7 @@ import { slide32 } from "./32-thanks";
 
 export const slides: SlideEntry[] = [
   slide00,
+  slide00b,
   slide03,
   slide01,
   slide02,
